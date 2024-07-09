@@ -1,9 +1,13 @@
+'use client'
+
 import { ProjectContainer } from "./components/Projects/ProjectContainer";
 import { BackSkills } from "./components/SkillsContainer/BackSkills";
 import { FrontSkills } from "./components/SkillsContainer/FrontSkills";
 import { BtnContact } from "./components/btnContact/BtnContact";
 import { ContactContainer } from "./components/contact/ContactContainer";
 import { Navbar } from "./components/navbar";
+
+
 
 
 export default function Home() {
@@ -16,10 +20,10 @@ export default function Home() {
       </Navbar.Root>
 
       <div>
-        <div className=" bg-[url('../images/dots.png')] invert bg-cover bg-no-repeat w-[700px] h-[900px]" />
+        <div className=" bg-[url('../assets/dots.png')] invert bg-cover bg-no-repeat w-[700px] h-[900px]" />
         <div>
           <div>
-            <div className=" bg-[url('../images/ft.jpg')] w-[350px] h-[350px] bg-cover bg-no-repeat rounded-full absolute left-[450px] top-72 border-4 border-purple-900 " />
+            <div className=" bg-[url('../assets/ft.jpg')] w-[350px] h-[350px] bg-cover bg-no-repeat rounded-full absolute left-[450px] top-72 border-4 border-purple-900 " />
           </div>
           <h2 className="absolute left-[900px] top-80 text-[50px] text-nowrap">Desenvolvedor WEB</h2>
           <div>
@@ -37,7 +41,7 @@ export default function Home() {
       <div className="w-[90%] h-[850px] bg-opacity-40 rounded-2xl m-auto my-[90px] border-white border-[1px] p-5
       grid grid-cols-3 grid-rows-2 gap-10
       ">
-        
+
         <div className="col-start-1 ">
           <FrontSkills />
         </div>
@@ -46,13 +50,14 @@ export default function Home() {
           <BackSkills />
         </div>
 
-        <div className="col-start-3 row-span-2 ">
-          <ProjectContainer />
-        </div>
-
         <div className="row-start-2 col-span-2">
           <ContactContainer />
         </div>
+
+        <div className="col-start-3 row-span-2 ">
+          <ProjectContainer />
+        </div>
+        
       </div>
 
     </main>

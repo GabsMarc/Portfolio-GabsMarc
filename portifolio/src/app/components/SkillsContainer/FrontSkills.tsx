@@ -3,7 +3,7 @@ import { Skills } from "./Skills"
 export function FrontSkills() {
 
     return (
-        <div className="bg-purple-950 bg-opacity-70 h-[400px] rounded-lg flex flex-col p-2">
+        <div className="border-[2px] border-white bg-opacity-70 h-[400px] rounded-lg flex flex-col p-2 hover:bg-[#160024] duration-300 ">
 
             <div className="flex-1">
                 <h2 className="text-center text-xl">Front-End</h2>
