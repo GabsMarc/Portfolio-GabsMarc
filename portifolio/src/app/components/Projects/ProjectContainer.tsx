@@ -45,11 +45,11 @@ export function ProjectContainer() {
 
             <div className=" flex-1 mx-[15px] my-[10px] flex flex-col gap-5 place-items-center justify-center ">
 
-                <div className="border-white border-[1px] h-[270px] w-[100%]">
+                <div className="border-white border-[1px] h-[270px] w-[100%] rounded-lg">
                     <Swipe content={Projeto1} />
                 </div>
 
-                <div className="border-white border-[1px] h-[450px] w-[50%]">
+                <div className="border-white border-[1px] h-[450px] w-[50%] rounded-lg">
                     <Swipe content={Projeto2} />
                 </div>
 

@@ -5,7 +5,7 @@ export function ContactContainer() {
     return (
         <div className="border-white border-[1px] h-full w-full rounded-lg p-2 flex flex-col hover:bg-[#160024] duration-300 ">
             <h2 className="text-center text-xl">Contato</h2>
-            <div className="flex flex-1 gap-5">
+            <div className="flex flex-1 gap-5 p-2">
                 <div className="flex flex-[1] justify-center px-2">
 
                     <div className=" bg-[url('../assets/ft2.jpg')] rounded-lg w-[230px] h-[320px] bg-cover bg-no-repeat mr-3 shadow-[white] shadow-[5px_2px_5px_1px] " />
@@ -17,7 +17,7 @@ export function ContactContainer() {
                     </div>
 
                 </div>
-                <div className="flex gap-3">
+                <div className="flex gap-4">
                     <div className="bg-blue-500 rounded-2xl ">
                         <ContactArea title="Linkedin" buttonText="Acessar" link="https://www.linkedin.com/in/gabriel-marcucci-3ab386208/" img="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/linkedin/linkedin-original.svg" />
                     </div>
