@@ -15,6 +15,13 @@ import Paladar10 from '../../../assets/Paladar-Divino/Paladar-10.png'
 import Finance1 from '../../../assets/Finance/Finance-1.jpg'
 import Finance2 from '../../../assets/Finance/Finance-2.jpg'
 import Finance3 from '../../../assets/Finance/Finance-3.jpg'
+import Finance4 from '../../../assets/Finance/Finance-4.jpg'
+import Finance5 from '../../../assets/Finance/Finance-5.jpg'
+import Finance6 from '../../../assets/Finance/Finance-6.jpg'
+import Finance7 from '../../../assets/Finance/Finance-7.jpg'
+import Finance8 from '../../../assets/Finance/Finance-8.jpg'
+import Finance9 from '../../../assets/Finance/Finance-9.jpg'
+import Finance10 from '../../../assets/Finance/Finance-10.jpg'
 
 export function ProjectContainer() {
 
@@ -35,6 +42,13 @@ export function ProjectContainer() {
         { id: '1', image: Finance1 },
         { id: '2', image: Finance2 },
         { id: '3', image: Finance3 },
+        { id: '4', image: Finance4 },
+        { id: '5', image: Finance5 },
+        { id: '6', image: Finance6 },
+        { id: '7', image: Finance7 },
+        { id: '8', image: Finance8 },
+        { id: '9', image: Finance9 },
+        { id: '10', image: Finance10 },
     ]
 
 
@@ -45,12 +59,12 @@ export function ProjectContainer() {
 
             <div className=" flex-1 mx-[15px] my-[10px] flex flex-col gap-5 place-items-center justify-center ">
 
-                <div className="border-white border-[1px] h-[270px] w-[100%] rounded-lg">
+                <div className="border-white border-[1px] h-[270px] w-[100%] rounded-lg bg-black">
                     <Swipe content={Projeto1} />
                 </div>
 
                 <div className="border-white border-[1px] h-[450px] w-[50%] rounded-lg">
-                    <Swipe content={Projeto2} />
+                    <Swipe content={Projeto2} delay={4500} />
                 </div>
 
 

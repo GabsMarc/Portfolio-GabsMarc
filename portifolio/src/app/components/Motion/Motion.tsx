@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 interface MotionProps {
     children?: React.ReactNode
     transition: number
+    whileHover?: number
     position?: number
     text?: string
     style?: string
@@ -19,14 +20,14 @@ const defaultAnimations = {
 }
 
 
-export function MotionBox({ children, transition }: MotionProps) {
+export function MotionBox({ children, transition, whileHover = 1.03 }: MotionProps) {
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: transition }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.03 }}
+            whileHover={{ scale: whileHover }}
         >
             {children}
         </motion.div>

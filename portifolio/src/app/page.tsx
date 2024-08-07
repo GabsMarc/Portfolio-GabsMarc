@@ -13,13 +13,14 @@ export default function Home() {
   return (
     <main className="mb-10">
 
-      <Navbar.Root>
-          <Navbar.Logo text="<Gabs DEV/>" />
-        <Navbar.Span text="Conteúdo" />
-      </Navbar.Root>
+      <div className="h-[1000px]">
 
-      <div>
-        <div className=" bg-[url('../assets/dots.png')] invert bg-cover bg-no-repeat w-[700px] h-[900px]" />
+        <Navbar.Root>
+          <Navbar.Logo text="<Gabs DEV/>" />
+          <Navbar.Span text="Conteúdo" />
+        </Navbar.Root>
+
+        <div className=" bg-[url('../assets/pontinhos.png')] invert bg-contain bg-no-repeat w-[800px] h-[1000px] absolute top-6" />
         <div>
 
           <div>
@@ -63,8 +64,8 @@ export default function Home() {
         </div>
 
         <div className="col-start-3 row-span-2 ">
-          <MotionBox transition={1.4}>
-            <ProjectContainer />
+          <MotionBox transition={1.4} whileHover={1}>
+          <ProjectContainer />
           </MotionBox>
         </div>
 

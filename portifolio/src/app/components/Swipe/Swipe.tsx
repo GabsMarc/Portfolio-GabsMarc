@@ -8,27 +8,29 @@ import 'swiper/css/navigation'
 
 interface SwipeProps {
     content: Array<any>
+    delay?: number
 }
 
 
 
-export function Swipe({ content }: SwipeProps) {
+export function Swipe({ content, delay = 4000 }: SwipeProps) {
 
     return (
-
         <Swiper
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-                delay: 5000,
+                delay: delay,
                 disableOnInteraction: false,
             }}
             modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper"
         >
+
             {content.map((item) => (
                 <SwiperSlide key={item.id}>
-                    <Image src={item.image} alt=""/>
+                    {/* <div className="hover:opacity-60"> */}
+                        <Image src={item.image} alt="" className="hover:opacity-60" onClick={() => {console.log('clicou' + item.id)}}/>
+                    {/* </div> */}
                 </SwiperSlide>
             ))}
 
