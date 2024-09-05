@@ -9,8 +9,8 @@ export function Skills({ img, skill, style }: SkillsProps) {
 
     return (
         <div className="flex">
-            <img className={`w-[43px] h-[43px] ${style}`} src={`${img}`} />
-            <span className="self-center px-3">{skill}</span>
+            <img className={`w-[30px] h-[30px] md:w-[35px] md:h-[35px] ${style}`} src={`${img}`} />
+            <span className="self-center text-wrap w-1 px-3">{skill}</span>
         </div>
     )
 }

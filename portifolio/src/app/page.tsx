@@ -13,11 +13,10 @@ export default function Home() {
   return (
     <main className="mb-10">
 
-      <div className="h-[1000px]">
+      {/* <div className="h-[1000px]">
 
         <Navbar.Root>
           <Navbar.Logo text="<Gabs DEV/>" />
-          <Navbar.Span text="Conteúdo" />
         </Navbar.Root>
 
         <div className=" bg-[url('../assets/pontinhos.png')] invert bg-contain bg-no-repeat w-[800px] h-[1000px] absolute top-6" />
@@ -40,34 +39,36 @@ export default function Home() {
           </div>
 
         </div>
-      </div>
+      </div> */}
 
-      <div className="w-[90%] h-[850px] bg-opacity-40 rounded-2xl m-auto my-[90px] border-white border-[1px] p-5
-      grid grid-cols-3 grid-rows-2 gap-10
+      <div className="
+      w-[90%] bg-opacity-40 rounded-2xl m-auto my-[90px] border-white border-[1px] p-5
+      grid gap-10
+      lg:grid-cols-3 lg:grid-rows-2 
       ">
-        <div className="col-start-1 ">
+        <div className="col-start-1 row-start-1 lg:row-start-1 ">
           <MotionBox transition={0.6}>
             <FrontSkills />
           </MotionBox>
         </div>
 
-        <div className="col-start-2 ">
+        <div className="col-start-1 row-start-2 lg:col-start-2 lg:row-start-1 ">
           <MotionBox transition={0.8}>
             <BackSkills />
           </MotionBox>
         </div>
 
-        <div className="row-start-2 col-span-2">
+        <div className="col-start-1 row-start-3 lg:col-start-1 lg:col-span-2 lg:row-start-2  ">
           <MotionBox transition={1.2}>
             <ContactContainer />
           </MotionBox>
         </div>
 
-        <div className="col-start-3 row-span-2 ">
+        {/* <div className="col-start-3 row-span-2 ">
           <MotionBox transition={1.4} whileHover={1}>
-          <ProjectContainer />
+            <ProjectContainer />
           </MotionBox>
-        </div>
+        </div> */}
 
       </div>
 
