@@ -3,12 +3,12 @@ import { ContactArea } from "./contactArea/ContactArea"
 export function ContactContainer() {
 
     return (
-        <div className="border-white border-[1px] h-full w-full rounded-lg p-2 flex flex-col hover:bg-[#160024] duration-300 ">
+        <div className="border-white border-[1px] h-[100%] w-full rounded-lg p-2 flex flex-col hover:bg-[#160024] duration-300 ">
             <h2 className="text-center text-xl">Contato</h2>
-            <div className="flex flex-1 gap-5 p-2 flex-col lg:flex-row">
-                <div className="flex flex-[1] justify-center px-2">
+            <div className="flex flex-1 gap-5 p-7 flex-col lg:flex-row">
+                <div className="flex flex-[1] justify-center">
 
-                    <div className=" bg-[url('../assets/ft2.jpg')] rounded-lg w-[230px] h-[320px] bg-cover bg-no-repeat " />
+                    <div className=" bg-[url('../assets/ft2.jpg')] rounded-lg w-[230px] h-[305px] bg-cover bg-no-repeat " />
 
                     <div className="flex justify-center">
                         <div className="bg-blue-700 cursor-pointer h-[45px] w-[45px] text-white text-center text-xl font-medium content-center rounded-full self-end -ml-[60px] mb-[5px] duration-300 hover:bg-gray-300 hover:text-blue-700">

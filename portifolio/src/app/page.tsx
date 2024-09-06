@@ -41,11 +41,8 @@ export default function Home() {
         </div>
       </div> */}
 
-      <div className="
-      w-[90%] bg-opacity-40 rounded-2xl m-auto my-[90px] border-white border-[1px] p-5
-      grid gap-10
-      lg:grid-cols-3 lg:grid-rows-2 
-      ">
+      <div className="w-[90%] p-[10px] gap-5 bg-opacity-40 rounded-2xl m-auto my-[90px] border-white border-[1px] grid lg:grid-cols-3 lg:grid-rows-2 ">
+        
         <div className="col-start-1 row-start-1 lg:row-start-1 ">
           <MotionBox transition={0.6}>
             <FrontSkills />
@@ -58,17 +55,17 @@ export default function Home() {
           </MotionBox>
         </div>
 
-        <div className="col-start-1 row-start-3 lg:col-start-1 lg:col-span-2 lg:row-start-2  ">
+        <div className="col-start-1 row-start-3 lg:col-start-1 lg:col-span-2 lg:row-start-2">
           <MotionBox transition={1.2}>
             <ContactContainer />
           </MotionBox>
         </div>
 
-        {/* <div className="col-start-3 row-span-2 ">
+        <div className="col-start-1 row-start-4 lg:col-start-3 lg:row-span-2">
           <MotionBox transition={1.4} whileHover={1}>
             <ProjectContainer />
           </MotionBox>
-        </div> */}
+        </div>
 
       </div>
 

@@ -54,19 +54,18 @@ export function ProjectContainer() {
 
 
     return (
-        <div className="bg-[#160024] border-white border-[1px] h-full rounded-lg p-2 flex flex-col">
+        <div className="bg-[#160024] border-white border-[1px] h-full w-[100%] rounded-lg flex flex-col p-[24px]">
             <h2 className="text-center text-xl">Projetos</h2>
 
-            <div className=" flex-1 mx-[15px] my-[10px] flex flex-col gap-5 place-items-center justify-center ">
+            <div className=" flex-1 flex flex-col gap-5 place-items-center justify-center w-[100%] p-2">
 
-                <div className="border-white border-[1px] h-[270px] w-[100%] rounded-lg bg-black">
+                <div className="border-white border-[1px] h-[25vh] w-[70vw] md:h-[35vh] lg:h-[270px] lg:w-[100%] rounded-lg bg-black">
                     <Swipe content={Projeto1} />
                 </div>
 
-                <div className="border-white border-[1px] h-[450px] w-[50%] rounded-lg">
+                <div className="border-white border-[1px] h-[45vh] w-[50vw] md:h-[75vh] lg:h-[450px] lg:w-[50%] rounded-lg">
                     <Swipe content={Projeto2} delay={4500} />
                 </div>
-
 
             </div>
         </div>
