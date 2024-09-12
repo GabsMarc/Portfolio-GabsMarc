@@ -28,9 +28,7 @@ export function Swipe({ content, delay = 4000 }: SwipeProps) {
 
             {content.map((item) => (
                 <SwiperSlide key={item.id}>
-                    {/* <div className="hover:opacity-60"> */}
-                        <Image src={item.image} alt="" className="hover:opacity-60" onClick={() => {console.log('clicou' + item.id)}}/>
-                    {/* </div> */}
+                        <Image src={item.image} alt="" className="cursor-pointer"/>
                 </SwiperSlide>
             ))}
 

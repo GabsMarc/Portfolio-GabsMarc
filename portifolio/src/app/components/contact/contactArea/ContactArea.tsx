@@ -16,7 +16,7 @@ export function ContactArea({ img, title, buttonText, link }: ContactAreaProps) 
             <h3 className="text-center text-xl mt-5 flex-1">{title}</h3>
 
             <div className="flex justify-center flex-[1]">
-                <a href={link} target="_blank" className="bg-white text-black cursor-pointer h-[40px] w-[80%] self-end text-center content-center rounded-lg mb-5">{buttonText}</a>
+                <a href={link} target="_blank" className="bg-white text-black cursor-pointer h-[40px] w-[80%] text-center content-center rounded-lg mt-[30%] mb-2 hover:bg-gray-400 duration-300">{buttonText}</a>
             </div>
         </div>
     )

@@ -20,7 +20,7 @@ const defaultAnimations = {
 }
 
 
-export function MotionBox({ children, transition, whileHover = 1.03 }: MotionProps) {
+export function MotionBox({ children, transition, whileHover = 1.011 }: MotionProps) {
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
