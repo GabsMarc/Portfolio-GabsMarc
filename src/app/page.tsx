@@ -30,7 +30,7 @@ export default function Home() {
           <MotionText transition={0.8} position={200} text="Desenvolvedor WEB" style="absolute left-[30px] top-[430px] sm:left-[360px] sm:top-[260px] md:left-[400px] md:top-80 lg:left-[900px] lg:top-80 text-[24px] lg:text-[50px] text-nowrap" />
 
           <div className="w-[400px] lg:w-[550px] absolute left-[30px] sm:left-[360px] sm:top-[320px] md:left-[400px] md:top-[370px] lg:left-[900px] lg:top-[400px] top-[470px]">
-            <MotionTextStaggered transition={0.3} text="Oi, eu sou o Gabriel Marcucci, sou desenvolvedor WEB/Mobile e este é o meu portifólio 😉👇" style="text-[14px] lg:text-2xl text-wrap " />
+            <MotionTextStaggered transition={0.3} text="Oi, eu sou o Gabriel Marcucci, sou desenvolvedor WEB/Mobile e este é o meu portifólio." style="text-[14px] lg:text-2xl text-wrap " />
           </div>
 
 
