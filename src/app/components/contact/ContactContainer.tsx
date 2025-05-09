@@ -1,12 +1,29 @@
+import { StaticImageData } from "next/image"
 import { ContactArea } from "./contactArea/ContactArea"
 
-export function ContactContainer() {
+
+interface IContactButton {
+    image: StaticImageData
+}
+
+
+export function ContactContainer({ image }: IContactButton) {
 
     return (
-        <div className="border-white border-[1px] h-[100%] w-full rounded-lg p-2 flex flex-col hover:bg-[#160024] duration-300 ">
+        <div className="border-[1px] rounded-lg p-2 flex flex-col hover:bg-[#160024] duration-300 ">
+
             <h2 className="text-center text-xl">Contato</h2>
-            <div className="flex flex-1 gap-5 p-7 flex-col lg:flex-row">
-                <div className="flex flex-[1] justify-center">
+        </div>
+    )
+
+}
+
+
+
+// <div className="border-[1px] rounded-lg p-2 flex flex-col hover:bg-[#160024] duration-300 ">
+//     <h2 className="text-center text-xl">Contato</h2>
+//     <div className="flex flex-1 gap-5 p-7 flex-col lg:flex-row">
+{/* <div className="flex flex-[1] justify-center">
 
                     <div className=" bg-[url('../assets/ft2.jpg')] rounded-lg w-[230px] h-[305px] bg-cover bg-no-repeat " />
 
@@ -16,8 +33,8 @@ export function ContactContainer() {
                         </div>
                     </div>
 
-                </div>
-                <div className="flex gap-4 flex-col m-auto lg:flex-row lg:m-0 w-[60%] items-center lg:items-stretch">
+                </div> */}
+{/* <div className="flex gap-4 flex-col m-auto lg:flex-row lg:m-0 w-[60%] items-center lg:items-stretch">
                     <div className="bg-blue-500 rounded-2xl w-[170px] lg:w-[100%]">
                         <ContactArea title="Linkedin" buttonText="Acessar" link="https://www.linkedin.com/in/gabriel-marcucci-3ab386208/" img="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/linkedin/linkedin-original.svg" />
                     </div>
@@ -27,11 +44,7 @@ export function ContactContainer() {
                     <div className="bg-red-500 rounded-2xl w-[170px] lg:w-[100%]">
                         <ContactArea title="Email" buttonText="Acessar" link="mailto:gabsmarcc@gmail.com" img="https://github.com/gauravghongde/social-icons/blob/master/PNG/Color/Gmail.png?raw=true" />
                     </div>
-                </div>
+                </div> */}
 
-            </div>
-        </div>
-    )
-
-}
-
+{/* </div>
+        </div> */}
