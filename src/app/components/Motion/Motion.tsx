@@ -1,4 +1,5 @@
-import { motion } from "framer-motion"
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react"
 
 interface MotionProps {
     children?: React.ReactNode
@@ -48,14 +49,20 @@ export function MotionText({ children, transition, text, style }: MotionProps) {
     )
 }
 
-export function MotionTextStaggered({ children, transition, text, style, el: Wrapper = 'p' }: MotionProps) {
+export function MotionTextStaggered({ children, transition, text, style, el: Wrapper = 'p', whileHover = 1.011 }: MotionProps) {
+
+    const ref = useRef(null)
+    const isInView = useInView(ref, { amount: 0.5, once: true })
+
     return (
         <Wrapper className={`${style}`}>
             <motion.span
                 initial="hidden"
-                animate="visible"
+                ref={ref}
+                animate={isInView ? 'visible' : 'hidden'}
                 transition={{ staggerChildren: 0.03 }}
                 aria-hidden
+                whileHover={{ scale: whileHover }}
             >
                 {text?.split("").map((char) => (
                     <motion.span variants={defaultAnimations}>{char}</motion.span>
