@@ -38,7 +38,7 @@ export function ProjectFinance() {
               xl:flex-row xl:items-stretch
         ">
             <div className="w-[230px] h-[460px] rounded-lg bg-transparent m-5 shadow-[#000000c6] shadow-lg
-                 xl:w-[250px] xl:h-[500px] xl:flex xl:flex-1 xl:mx-[70px] 
+                 xl:w-[250px] xl:h-[500px] xl:flex xl:mx-[70px] 
                  xl:shadow-xl
             ">
                 <Swipe content={ProjectFinance} delay={4500} />

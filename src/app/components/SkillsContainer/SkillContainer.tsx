@@ -8,9 +8,10 @@ type SkillItems = {
 
 interface SkillsI {
     array: SkillItems[]
+    title: string
 }
 
-export function SkillContainer({ array }: SkillsI) {
+export function SkillContainer({ array, title }: SkillsI) {
 
 
     return (
@@ -22,7 +23,7 @@ export function SkillContainer({ array }: SkillsI) {
         ">
 
             <div className="flex-1">
-                <h2 className="text-center text-xl">Front-End</h2>
+                <h2 className="text-center text-xl">{title}</h2>
                 <div className="flex flex-col flex-wrap justify-between h-[300px] gap-10 p-5">
 
                     {

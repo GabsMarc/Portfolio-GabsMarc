@@ -207,7 +207,7 @@ export default function Home() {
             2xl:left-[670px] 2xl:mt-10 2xl:w-[1000px]
           ">
             <MotionTextStaggered
-              transition={0.3} text="Oi, eu sou o Gabriel Marcucci, sou desenvolvedor WEB FullStack, gosto tanto da parte visual de uma aplicação web, quanto dos processos que o usuario não vê, e nesse site eu mostro um pouco do que eu já desenvolvi sozinho para estudo."
+              transition={0.3} text="Oi, eu sou o Gabriel Marcucci, sou desenvolvedor WEB FullStack, gosto tanto da parte visual de uma aplicação web, quanto dos processos que o usuário não vê, e nesse site eu mostro um pouco do que eu já desenvolvi sozinho para estudo."
               style=" left-[30px] top-[540px] bg-[#000000ae] text-[14px] text-wrap rounded-[10px] 
                 xl:text-[16px]
                 2xl:text-[20px]
@@ -228,11 +228,11 @@ export default function Home() {
         2xl:mt-[290px]
       ">
         <MotionBox transition={0.6}>
-          <SkillContainer array={FrontEndSkills} />
+          <SkillContainer array={FrontEndSkills} title="Front-End" />
         </MotionBox>
 
         <MotionBox transition={0.6}>
-          <SkillContainer array={BackEndSkills} />
+          <SkillContainer array={BackEndSkills} title="Back-End"/>
         </MotionBox>
       </div>
 
