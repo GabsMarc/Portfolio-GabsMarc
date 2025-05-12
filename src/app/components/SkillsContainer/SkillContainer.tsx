@@ -18,7 +18,7 @@ export function SkillContainer({ array }: SkillsI) {
         <div className="bg-[#9c47fd28] w-[400px] border-[1px] rounded-lg flex flex-col p-2 mb-5 duration-300 
             sm:w-[480px] 
             lg:w-[470px]
-            xl:w-[500px]
+            xl:w-[520px]
         ">
 
             <div className="flex-1">

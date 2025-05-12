@@ -1,10 +1,8 @@
 'use client'
 
 import { ProjectFinance, ProjectContainer } from "./components/Projects/ProjectContainer";
-import { BackSkills } from "./components/SkillsContainer/BackSkills";
 import { SkillContainer } from "./components/SkillsContainer/SkillContainer";
 import { BtnContact } from "./components/btnContact/BtnContact";
-import { ContactContainer } from "./components/contact/ContactContainer";
 import { Navbar } from "./components/navbar";
 import { MotionBox, MotionText, MotionTextStaggered } from "./components/Motion/Motion";
 import Image from "next/image";
@@ -207,15 +205,18 @@ export default function Home() {
       </div>
 
 
-      <div className="flex flex-col place-items-center">
+      <div className="flex flex-col place-items-center 
+        
+      ">
 
         <div className="w-[93%] mt-[100px]
           sm:w-[595px]
           md:w-[650px]
-          lg:w-[780px]
+          lg:w-[830px]
+          xl:w-[1230px]
         ">
 
-          <MotionBox transition={1.4} whileHover={1}>
+          <MotionBox transition={1.4}>
             <ProjectContainer
               title="Divino Hamburgueria"
               about="Site desenvolvido com foco no aprendizado de novas tecnologias do Front-End e principalmente no Back-End."
@@ -226,7 +227,7 @@ export default function Home() {
             </ProjectContainer>
           </MotionBox>
 
-          <MotionBox transition={1.4} whileHover={1}>
+          <MotionBox transition={1.4}>
             <ProjectContainer
               title="ProfileSync"
               about="Projeto criado com o objetivo de desenvolver uma tela que armazene todos os links que eu achar necessário em um só lugar."
@@ -237,7 +238,7 @@ export default function Home() {
             </ProjectContainer>
           </MotionBox>
 
-          <MotionBox transition={1.4} whileHover={1}>
+          <MotionBox transition={1.4}>
             <ProjectContainer
               title="YoutubeCopy"
               about="Esse projeto foi criado com o objetivo de tentar recriar uma interface com o conhecimento que eu tinha até o momento do projeto."
@@ -248,7 +249,7 @@ export default function Home() {
             </ProjectContainer>
           </MotionBox>
 
-          <MotionBox transition={1.4} whileHover={1}>
+          <MotionBox transition={1.4}>
             <ProjectContainer
               title="(Back-End) - Projeto API NODE"
               about="Projeto de Back-End completo, todo organizado e padronizado, com testes usando o Jest, Token de autorização para acesso as rotas e senhas de usuários criptografadas."
@@ -259,7 +260,7 @@ export default function Home() {
             </ProjectContainer>
           </MotionBox>
 
-          <MotionBox transition={1.4} whileHover={1}>
+          <MotionBox transition={1.4}>
             <ProjectFinance />
           </MotionBox>
 
