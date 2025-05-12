@@ -37,15 +37,17 @@ export function ProjectFinance() {
         <div className="bg-[#180B28] border-[1px] h-full w-[100%] rounded-[10px] flex flex-col mb-5 items-center py-5
               xl:flex-row xl:items-stretch
         ">
-            <div className="w-[230px] h-[460px] rounded-lg bg-transparent m-5
-                 xl:w-[250px] xl:h-[500px] xl:flex xl:flex-1
+            <div className="w-[230px] h-[460px] rounded-lg bg-transparent m-5 shadow-[#000000c6] shadow-lg
+                 xl:w-[250px] xl:h-[500px] xl:flex xl:flex-1 xl:mx-[70px] 
+                 xl:shadow-xl
             ">
                 <Swipe content={ProjectFinance} delay={4500} />
             </div>
 
 
             <div className="
-                xl:flex xl:flex-col xl:justify-between bg-[#0000004d] mx-3 pt-3 xl:mr-5 rounded-[10px]
+                xl:flex xl:flex-col xl:justify-between bg-[#0000004d] mx-3 pt-3 xl:mr-5 rounded-[10px] shadow-lg shadow-[#000000c6]
+                xl:shadow-xl
             ">
                 <div className="w-[100%] font-medium pl-2
                 xl:mt-[20px]
@@ -56,6 +58,7 @@ export function ProjectFinance() {
 
                 <div className="w-[100%] px-8
                     xl:px-3 xl:mt-[100px] pb-10
+                    
                 ">
                     <MotionBox transition={0.6}>
 
@@ -95,15 +98,17 @@ export function ProjectContainer({ children, title, about, techUsed, link }: tes
         <div className="bg-[#180B28] border-[1px] h-full w-[100%] rounded-[10px] flex flex-col mb-5 items-center py-5
               xl:flex-row xl:items-stretch
         ">
-            <div className="w-[95%] h-[100%] rounded-lg bg-transparent m-5
-                 xl:w-[60%] xl:flex xl:flex-1
+            <div className="w-[95%] h-[100%] rounded-lg bg-transparent m-5 shadow-lg shadow-[#0000006e]
+                 xl:w-[60%] xl:flex xl:flex-1 xl:shadow-xl 
             ">
                 {children}
             </div>
 
 
-            <div className="
-                xl:flex xl:flex-col xl:justify-between bg-[#0000004d] mx-3 pt-3 xl:mr-5 rounded-[10px]
+            <div className=" bg-[#0000004d] mx-3 pt-3 rounded-[10px] shadow-[#0000006e]
+                shadow-xl
+                xl:flex xl:flex-col xl:justify-between xl:mr-5 
+                
             ">
                 <div className="w-[100%] font-medium pl-2 
                 xl:mt-[20px]

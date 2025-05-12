@@ -154,46 +154,78 @@ export default function Home() {
           alt=""
           width={0}
           height={0}
-          className="w-[100%] h-[100%] invert "
-        />
-        <div>
+          className="w-[450px] h-[100%] invert absolute
+            sm:w-[500px] sm:h-[100%]
+            md:w-[600px] md:h-[100%]
+            lg:w-[700px] lg:h-[1000px]
+            xl:w-[900px] xl:h-[1100px]
+            2xl:w-[1000px] 2xl:h-[1200px]
+          
+          "/>
+        <div className="relative">
 
           <div>
-            <div className="bg-[url('../assets/ft.jpg')] w-[220px] h-[220px] bg-cover bg-no-repeat rounded-full absolute left-[20px] top-[180px] border-4 border-purple-900
-            sm:left-[70px]   ">
+            <div className="bg-[url('../assets/ft.jpg')] w-[220px] h-[220px] m-auto mt-10 bg-cover bg-no-repeat rounded-full border-4 border-purple-900
+              sm:left-[70px] sm:absolute sm:mt-[100px]
+              xl:left-[130px] xl:w-[250px] xl:h-[250px]
+              2xl:left-[130px] 2xl:w-[320px] 2xl:h-[320px]
+            ">
             </div>
           </div>
 
-
-          <MotionTextStaggered
-            transition={0.8}
-            position={200}
-            text="Desenvolvedor WEB"
-            style="absolute left-[30px] top-[430px] bg-[#00000097] text-[24px] text-nowrap rounded-[10px] 
-            sm:left-[350px] sm:top-[230px] " />
-
-
-          <MotionTextStaggered
-            transition={0.3} text="Oi, eu sou o Gabriel Marcucci, sou desenvolvedor WEB/Mobile e este é o meu portifólio."
-            style=" absolute left-[30px] top-[470px] bg-[#00000097] text-[14px] text-wrap rounded-[10px] 
-              sm:left-[360px] sm:top-[270px] 
-              "
-          />
-
-
-          <div className="flex gap-5 absolute flex-col sm:flex-row left-[280px] top-[240px] 
-            sm:left-[50px] sm:top-[420px] md:left-[100px] md:top-[500px] lg:left-[503px] lg:top-[680px]"
+          <div className="flex gap-2 m-auto flex-row mt-5 justify-center 
+            sm:left-[60px] sm:top-[350px] sm:flex-row sm:absolute sm:m-0
+            xl:left-[135px] xl:top-[370px]
+            2xl:left-[160px] 2xl:top-[490px]
+            "
           >
             <BtnContact logo={true} text="GitHub" link="https://github.com/GabsMarc" />
             <BtnContact logo={false} text="LinkedIn" link="https://www.linkedin.com/in/gabriel-marcucci-3ab386208/" />
           </div>
 
+          <div className="flex justify-center mt-[40px] 
+            sm:left-[330px] sm:top-[120px] sm:absolute
+            md:left-[370px] 
+            xl:left-[470px]
+            2xl:left-[670px]
+          ">
+            <MotionTextStaggered
+              transition={0.8}
+              position={200}
+              text="Desenvolvedor WEB"
+              style="left-[30px] top-[500px] bg-[#000000ae] text-[24px] text-nowrap rounded-[10px] 
+                xl:text-[28px]
+                2xl:text-[35px]
+              "/>
+          </div>
+
+          <div className="flex w-[340px] place-self-center mt-4
+            sm:left-[330px] sm:top-[200px] sm:absolute sm:w-[300px]
+            md:left-[370px] md:w-[380px]
+            lg:w-[600px]
+            xl:left-[470px]
+            2xl:left-[670px] 2xl:mt-10 2xl:w-[1000px]
+          ">
+            <MotionTextStaggered
+              transition={0.3} text="Oi, eu sou o Gabriel Marcucci, sou desenvolvedor WEB FullStack, gosto tanto da parte visual de uma aplicação web, quanto dos processos que o usuario não vê, e nesse site eu mostro um pouco do que eu já desenvolvi sozinho para estudo."
+              style=" left-[30px] top-[540px] bg-[#000000ae] text-[14px] text-wrap rounded-[10px] 
+                xl:text-[16px]
+                2xl:text-[20px]
+              "/>
+          </div>
+
+
+
+
         </div>
       </div>
 
 
-      <div className="mb-5 mt-[100px] flex flex-col place-items-center
+      <div className="mb-5 mt-[120px] flex flex-col place-items-center
         lg:flex-row lg:gap-5 lg:justify-center
+        sm:mt-[100px]
+        xl:mt-[180px]
+        2xl:mt-[290px]
       ">
         <MotionBox transition={0.6}>
           <SkillContainer array={FrontEndSkills} />
@@ -214,6 +246,7 @@ export default function Home() {
           md:w-[650px]
           lg:w-[830px]
           xl:w-[1230px]
+          2xl:w-[1400px]
         ">
 
           <MotionBox transition={1.4}>
