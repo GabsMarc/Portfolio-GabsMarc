@@ -32,18 +32,20 @@ export function BtnContactImage({ text, link, icon = "" }: BtnContactProps) {
 
     return (
         <MotionBox transition={0.3}>
-            <a className="px-5 py-[5px] mt-[6px] font-medium bg-[#46146f] flex flex-row rounded-lg justify-center items-center gap-2 hover:cursor-pointer hover:bg-[#4c2385] duration-200"
+            <a className="px-5 pr-2 py-[5px] mt-[6px] font-medium bg-[#46146f] flex flex-row rounded-lg justify-center items-center gap-2 hover:cursor-pointer hover:bg-[#4c2385] duration-200"
                 href={link}
                 download
             >
                 <span className="text-[13px] lg:text-[18px] xl:text-[15px] text-nowrap">{text}</span>
-                <Image
-                    src={icon}
-                    alt="GitHub"
-                    width={20}
-                    height={20}
-                    className="invert"
-                />
+                <div className="w-[17px] h-[17px]">
+                    <Image
+                        src={icon}
+                        alt="GitHub"
+                        width={22}
+                        height={22}
+                        className="invert"
+                    />
+                </div>
             </a>
         </MotionBox>
     )
