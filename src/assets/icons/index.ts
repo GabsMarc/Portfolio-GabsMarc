@@ -1,4 +1,5 @@
 import linkedin from './5296501_linkedin_network_linkedin logo_icon.png'
+import linkedinCircle from './linkedin-circle.png'
 import github from './211904_social_github_icon.png'
 import gmail from './7089163_gmail_google_icon.png'
 import javascript from './9035061_logo_javascript_icon.png'
@@ -19,6 +20,7 @@ import prisma from './prisma-icon-423x512-isxs6996.png'
 
 const IconsImages = {
     linkedin,
+    linkedinCircle,
     github,
     gmail,
     javascript,

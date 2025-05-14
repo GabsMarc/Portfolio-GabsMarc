@@ -7,7 +7,7 @@ import FinanceImages from "@/assets/Finance"
 import IconsImages from "@/assets/icons"
 import { ShortMotion } from "../Motion/ShortMotion"
 import { ReactNode } from "react"
-
+import { BtnContact, BtnContactImage } from "../btnContact/BtnContact"
 
 interface teste {
     children: ReactNode
@@ -15,6 +15,7 @@ interface teste {
     title: string
     about: string
     link: string
+    id: number
 }
 
 
@@ -32,35 +33,34 @@ export function ProjectFinance() {
         { id: '9', image: FinanceImages.Finance9 },
         { id: '10', image: FinanceImages.Finance10 },
     ]
-
+    
     return (
-        <div className="bg-[#180B28] border-[1px] h-full w-[100%] rounded-[10px] flex flex-col mb-5 items-center py-5
+        <div className="bg-[#180b2881] border-[1px] border-[#858585] h-full w-[100%] rounded-[10px] flex flex-col mb-20 items-center py-5
               xl:flex-row xl:items-stretch
         ">
-            <div className="w-[230px] h-[460px] rounded-lg bg-transparent m-5 shadow-[#000000c6] shadow-lg
-                 xl:w-[250px] xl:h-[500px] xl:flex xl:mx-[70px] 
-                 xl:shadow-xl
+            <div className="w-[230px] h-[460px] rounded-lg bg-transparent m-5 shadow-lg shadow-[#0000006e]
+                 xl:w-[250px] xl:h-[500px] xl:flex xl:mx-[70px] xl:shadow-xl   
             ">
                 <Swipe content={ProjectFinance} delay={4500} />
             </div>
 
 
-            <div className="
-                xl:flex xl:flex-col xl:justify-between bg-[#0000004d] mx-3 pt-3 xl:mr-5 rounded-[10px] shadow-lg shadow-[#000000c6]
-                xl:shadow-xl
+            <div className="w-[90%] h-[320px] bg-[#180B28] flex flex-col pt-3 rounded-[10px] shadow-[#0000006e] shadow-xl          
+                xl:flex xl:flex-col xl:justify-between xl:mr-5 xl:self-center
             ">
-                <div className="w-[100%] font-medium pl-2
-                xl:mt-[20px]
-            ">
+                <div className="w-[100%] font-medium pl-2 
+                    xl:mt-[20px]
+                ">
                     <h2 className="text-[25px] px-5">{'Finance'}</h2>
                 </div>
 
 
-                <div className="w-[100%] px-8
-                    xl:px-3 xl:mt-[100px] pb-10
-                    
-                ">
-                    <MotionBox transition={0.6}>
+                <div className="flex flex-col h-[100%] justify-between">
+
+                    <div className=" w-[100%] h-[100px] px-5 pt-5 
+                        xl:px-3 
+                    ">
+
 
                         <MotionTextStaggered
                             transition={0.5}
@@ -68,20 +68,28 @@ export function ProjectFinance() {
                             style="text-[15px] text-wrap " />
 
 
-                        <div className="flex flex-row px-5 pt-5 text-[15px] justify-between">
+                    </div>
 
-                            <ul className="list-disc place-items-start">
+                    <div className="w-[100%] pl-5 pb-2">
+
+                        <div className="flex flex-row px-2 pt-5 text-[15px] justify-between ">
+
+                            <ul className="list-disc place-items-start h-[100%] text-wrap">
                                 <li><ShortMotion text="React Native" /></li>
                                 <li><ShortMotion text="Javascript" /></li>
                                 <li><ShortMotion text="Firebase" /></li>
                             </ul>
 
                             <div className="content-end">
-                                <ContactButtonSquare img={IconsImages.github.src} link={'https://github.com/GabsMarc/Finance'} />
+                                <BtnContactImage icon={IconsImages.github.src} text="Acessar Repositório" link={'https://github.com/GabsMarc/Finance'} />                         
                             </div>
                         </div>
-                    </MotionBox>
+
+                    </div>
+
                 </div>
+
+
             </div>
 
         </div>
@@ -90,12 +98,10 @@ export function ProjectFinance() {
 
 
 
-export function ProjectContainer({ children, title, about, techUsed, link }: teste) {
-
-
+export function ProjectContainer({ id, children, title, about, techUsed, link }: teste) {
 
     return (
-        <div className="bg-[#180B28] border-[1px] h-full w-[100%] rounded-[10px] flex flex-col mb-5 items-center py-5
+        <div className="bg-[#180b2881] border-[1px] border-[#858585] h-full w-[100%] rounded-[10px] flex flex-col mb-20 items-center py-5
               xl:flex-row xl:items-stretch
         ">
             <div className="w-[95%] h-[100%] rounded-lg bg-transparent m-5 shadow-lg shadow-[#0000006e]
@@ -105,22 +111,22 @@ export function ProjectContainer({ children, title, about, techUsed, link }: tes
             </div>
 
 
-            <div className=" bg-[#0000004d] mx-3 pt-3 rounded-[10px] shadow-[#0000006e]
-                shadow-xl
-                xl:flex xl:flex-col xl:justify-between xl:mr-5 
-                
+            <div className=" bg-[#180B28] flex flex-col pt-3 rounded-[10px] shadow-[#0000006e] shadow-xl h-[450px] w-[90%]         
+                xl:flex xl:flex-col xl:justify-between xl:mr-5 xl:self-center
             ">
                 <div className="w-[100%] font-medium pl-2 
-                xl:mt-[20px]
-            ">
+                    xl:mt-[20px]
+                ">
                     <h2 className="text-[25px] px-5">{title}</h2>
                 </div>
 
 
-                <div className="w-[100%] px-8
-                    xl:px-3 xl:mt-[100px] pb-10
-                ">
-                    <MotionBox transition={0.6}>
+                <div className="flex flex-col h-[100%] justify-between">
+
+                    <div className="w-[100%] h-[100px] px-5 pt-5 
+                        xl:px-3 
+                    ">
+
 
                         <MotionTextStaggered
                             transition={0.5}
@@ -128,9 +134,13 @@ export function ProjectContainer({ children, title, about, techUsed, link }: tes
                             style="text-[15px] text-wrap " />
 
 
-                        <div className="flex flex-row px-5 pt-5 text-[15px] justify-between">
+                    </div>
 
-                            <ul className="list-disc place-items-start">
+                    <div className="w-[100%] pl-5 pb-2">
+
+                        <div className="flex flex-row px-2 pt-5 text-[15px] justify-between ">
+
+                            <ul className="list-disc place-items-start h-[100%] text-nowrap">
                                 {
                                     techUsed.map((e) => {
                                         return (
@@ -141,11 +151,15 @@ export function ProjectContainer({ children, title, about, techUsed, link }: tes
                             </ul>
 
                             <div className="content-end">
-                                <ContactButtonSquare img={IconsImages.github.src} link={link} />
+                                <BtnContactImage icon={IconsImages.github.src} text="Acessar Repositório" link={link} />
                             </div>
                         </div>
-                    </MotionBox>
+
+                    </div>
+
                 </div>
+
+
             </div>
 
         </div>
