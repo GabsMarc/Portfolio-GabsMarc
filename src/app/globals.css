@@ -6,3 +6,18 @@ body {
   background-color: black;
   color: white;
 }  
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff; /* Cor do ícone */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo */
+  padding: 10px;
+  border-radius: 50%;
+  width: 20px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #000;
+}

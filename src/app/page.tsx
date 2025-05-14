@@ -1,55 +1,14 @@
 'use client'
 
-import { ProjectFinance, ProjectContainer } from "./components/Projects/ProjectContainer";
 import { SkillContainer } from "./components/SkillsContainer/SkillContainer";
-import { BtnContact } from "./components/btnContact/BtnContact";
+import { BtnContact, ContactCircle } from "./components/btnContact/BtnContact";
 import { Navbar } from "./components/navbar";
-import { MotionBox, MotionText, MotionTextStaggered } from "./components/Motion/Motion";
+import { MotionBox, MotionTextStaggered } from "./components/Motion/Motion";
 import Image from "next/image";
 import pontinhos from '../assets/pontinhos.png'
-import projectProfileSyncImages from "@/assets/ProfileSync";
-import { Swipe } from "./components/Swipe/Swipe";
-import PaladarImages from "@/assets/Paladar-Divino";
-import YoutubeCopyImages from "@/assets/YoutubeCopy";
-import BackEndImages from "@/assets/Back-End";
+import { SwipeContent } from "./components/Swipe/Swipe";
+
 import IconsImages from "@/assets/icons";
-
-const projectProfileSync = [
-  { id: '1', image: projectProfileSyncImages.img1 },
-  { id: '2', image: projectProfileSyncImages.img2 },
-  { id: '3', image: projectProfileSyncImages.img3 },
-  { id: '4', image: projectProfileSyncImages.img4 }
-]
-
-const projectPaladar = [
-  { id: '1', image: PaladarImages.Paladar1 },
-  { id: '2', image: PaladarImages.Paladar2 },
-  { id: '3', image: PaladarImages.Paladar10 },
-  { id: '4', image: PaladarImages.Paladar3 },
-  { id: '5', image: PaladarImages.Paladar4 },
-  { id: '6', image: PaladarImages.Paladar5 },
-  { id: '7', image: PaladarImages.Paladar6 },
-  { id: '8', image: PaladarImages.Paladar7 },
-  { id: '9', image: PaladarImages.Paladar8 },
-  { id: '10', image: PaladarImages.Paladar9 },
-]
-
-const projectYoutubeCopy = [
-  { id: '1', image: YoutubeCopyImages.img1 },
-  { id: '2', image: YoutubeCopyImages.img2 },
-  { id: '3', image: YoutubeCopyImages.img3 },
-  { id: '4', image: YoutubeCopyImages.img4 }
-]
-
-const backEndAPI = [
-  { id: 1, image: BackEndImages.img1 },
-  { id: 2, image: BackEndImages.img2 },
-  { id: 3, image: BackEndImages.img3 },
-  { id: 4, image: BackEndImages.img4 },
-  { id: 5, image: BackEndImages.img5 },
-  { id: 6, image: BackEndImages.img6 },
-  { id: 7, image: BackEndImages.img7 },
-]
 
 const FrontEndSkills = [
   {
@@ -141,7 +100,7 @@ const BackEndSkills = [
 
 export default function Home() {
   return (
-    <main className="mb-10">
+    <main className="">
 
       <div className="h-[900px] lg:h-[1000px]">
 
@@ -179,13 +138,14 @@ export default function Home() {
             2xl:left-[160px] 2xl:top-[490px]
             "
           >
-            <BtnContact logo={true} text="GitHub" link="https://github.com/GabsMarc" />
-            <BtnContact logo={false} text="LinkedIn" link="https://www.linkedin.com/in/gabriel-marcucci-3ab386208/" />
+            <BtnContact text="Contate-me" link="mailto:gabsmarcc@gmail.com" />
+            <ContactCircle icon={IconsImages.github.src} link="https://github.com/GabsMarc" />
+            <ContactCircle icon={IconsImages.linkedinCircle.src} link="https://www.linkedin.com/in/gabriel-marcucci-3ab386208/" />
           </div>
 
-          <div className="flex justify-center mt-[40px] 
+          <div className="flex justify-center mt-[40px] font-bold
             sm:left-[330px] sm:top-[120px] sm:absolute
-            md:left-[370px] 
+            md:left-[360px] 
             xl:left-[470px]
             2xl:left-[670px]
           ">
@@ -199,16 +159,16 @@ export default function Home() {
               "/>
           </div>
 
-          <div className="flex w-[340px] place-self-center mt-4
+          <div className="flex w-[340px] place-self-center mt-4 text-center
             sm:left-[330px] sm:top-[200px] sm:absolute sm:w-[300px]
-            md:left-[370px] md:w-[380px]
+            md:left-[360px] md:w-[380px] md:text-left
             lg:w-[600px]
             xl:left-[470px]
             2xl:left-[670px] 2xl:mt-10 2xl:w-[1000px]
           ">
             <MotionTextStaggered
               transition={0.3} text="Oi, eu sou o Gabriel Marcucci, sou desenvolvedor WEB FullStack, gosto tanto da parte visual de uma aplicação web, quanto dos processos que o usuário não vê, e nesse site eu mostro um pouco do que eu já desenvolvi sozinho para estudo."
-              style=" left-[30px] top-[540px] bg-[#000000ae] text-[14px] text-wrap rounded-[10px] 
+              style=" left-[30px] top-[540px] bg-[#000000ae] text-[14px] text-wrap rounded-[10px]
                 xl:text-[16px]
                 2xl:text-[20px]
               "/>
@@ -221,20 +181,31 @@ export default function Home() {
       </div>
 
 
-      <div className="mb-5 mt-[120px] flex flex-col place-items-center
-        lg:flex-row lg:gap-5 lg:justify-center
+      <div className="w-[100%] flex flex-col mt-[100px]
         sm:mt-[100px]
         xl:mt-[180px]
         2xl:mt-[290px]
       ">
-        <MotionBox transition={0.6}>
-          <SkillContainer array={FrontEndSkills} title="Front-End" />
-        </MotionBox>
 
-        <MotionBox transition={0.6}>
-          <SkillContainer array={BackEndSkills} title="Back-End"/>
-        </MotionBox>
+        <div className="flex-1 ">
+          <h2 className="py-3 font-medium text-[24px] text-center ">
+            Meus conhecimentos
+          </h2>
+        </div>
+
+        <div className="flex-1 mb-5 flex flex-col place-items-center
+          lg:flex-row lg:gap-5 lg:justify-center">
+          <MotionBox transition={0.6}>
+            <SkillContainer array={FrontEndSkills} title="Front-End" />
+          </MotionBox>
+
+          <MotionBox transition={0.6}>
+            <SkillContainer array={BackEndSkills} title="Back-End" />
+          </MotionBox>
+        </div>
+
       </div>
+
 
 
       <div className="flex flex-col place-items-center 
@@ -245,67 +216,38 @@ export default function Home() {
           sm:w-[595px]
           md:w-[650px]
           lg:w-[830px]
-          xl:w-[1230px]
+          xl:w-[1200px]
           2xl:w-[1400px]
         ">
-
-          <MotionBox transition={1.4}>
-            <ProjectContainer
-              title="Divino Hamburgueria"
-              about="Site desenvolvido com foco no aprendizado de novas tecnologias do Front-End e principalmente no Back-End."
-              techUsed={["React", "Typescript", "Node", "Express", "Styled-Component", "Axios", "Prisma", "MySQL"]}
-              link="https://github.com/GabsMarc/PaladarDivino"
-            >
-              <Swipe content={projectPaladar} />
-            </ProjectContainer>
-          </MotionBox>
-
-          <MotionBox transition={1.4}>
-            <ProjectContainer
-              title="ProfileSync"
-              about="Projeto criado com o objetivo de desenvolver uma tela que armazene todos os links que eu achar necessário em um só lugar."
-              techUsed={['Next', 'Typescript', 'Tailwind CSS']}
-              link="https://github.com/GabsMarc/ProfileSync"
-            >
-              <Swipe content={projectProfileSync} />
-            </ProjectContainer>
-          </MotionBox>
-
-          <MotionBox transition={1.4}>
-            <ProjectContainer
-              title="YoutubeCopy"
-              about="Esse projeto foi criado com o objetivo de tentar recriar uma interface com o conhecimento que eu tinha até o momento do projeto."
-              techUsed={['Next', 'Typescript', 'Tailwind CSS']}
-              link="https://github.com/GabsMarc/YoutubeCopy"
-            >
-              <Swipe content={projectYoutubeCopy} />
-            </ProjectContainer>
-          </MotionBox>
-
-          <MotionBox transition={1.4}>
-            <ProjectContainer
-              title="(Back-End) - Projeto API NODE"
-              about="Projeto de Back-End completo, todo organizado e padronizado, com testes usando o Jest, Token de autorização para acesso as rotas e senhas de usuários criptografadas."
-              techUsed={['NODE', 'Typescript', 'SQLite', 'KNEX', 'YUP', 'BCrypt.js', 'JWT', 'Jest', 'Express']}
-              link="https://github.com/GabsMarc/Back-End-Projects/tree/main/API-Node-e-Typescript"
-            >
-              <Swipe content={backEndAPI} />
-            </ProjectContainer>
-          </MotionBox>
-
-          <MotionBox transition={1.4}>
-            <ProjectFinance />
-          </MotionBox>
-
-
-
+          <h2 className="py-3 font-medium text-[24px] text-center">
+            Meus Projetos
+          </h2>
+          <SwipeContent />
 
         </div>
 
       </div>
 
 
+      <footer className="w-full h-[120px] mt-[100px] bg-[#180b2881] flex justify-between border-t-[1px] border-[#484848]">
+
+        <div className="content-center">
+          <h1 className="text-[25px] pl-[30px] bg-gradient-to-r text-nowrap from-white via-purple-90000 to-purple-900 text-transparent bg-clip-text">
+            {"<Gabs DEV/>"}
+          </h1>
+        </div>
+
+        <div className="content-center">
+          <div className="flex gap-2 px-10 flex-row justify-center">
+            <BtnContact style="w-[60px]" text="CV" link="/Curriculo Gabriel Marcucci.pdf"/>
+            <ContactCircle icon={IconsImages.github.src} link="https://github.com/GabsMarc" />
+            <ContactCircle icon={IconsImages.linkedinCircle.src} link="https://www.linkedin.com/in/gabriel-marcucci-3ab386208/" />
+          </div>
+        </div>
+
+      </footer>
+
 
     </main >
-  );
+  )
 }
