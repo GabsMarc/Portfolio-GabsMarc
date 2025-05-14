@@ -239,14 +239,13 @@ export default function Home() {
 
         <div className="content-center">
           <div className="flex gap-2 px-10 flex-row justify-center">
-            <BtnContact style="w-[60px]" text="CV" link="/Curriculo Gabriel Marcucci.pdf"/>
+            <BtnContact style="w-[60px]" text="CV" link="https://gabsmarc.github.io/Portfolio-GabsMarc/CurriculoGabrielMarcucci.pdf"/>
             <ContactCircle icon={IconsImages.github.src} link="https://github.com/GabsMarc" />
             <ContactCircle icon={IconsImages.linkedinCircle.src} link="https://www.linkedin.com/in/gabriel-marcucci-3ab386208/" />
           </div>
         </div>
 
       </footer>
-
 
     </main >
   )
