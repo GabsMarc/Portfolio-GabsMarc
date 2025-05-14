@@ -138,7 +138,7 @@ export default function Home() {
             2xl:left-[160px] 2xl:top-[490px]
             "
           >
-            <BtnContact text="Contate-me" link="https://github.com/GabsMarc" />
+            <BtnContact text="Contate-me" link="mailto:gabsmarcc@gmail.com" />
             <ContactCircle icon={IconsImages.github.src} link="https://github.com/GabsMarc" />
             <ContactCircle icon={IconsImages.linkedinCircle.src} link="https://www.linkedin.com/in/gabriel-marcucci-3ab386208/" />
           </div>
@@ -229,18 +229,19 @@ export default function Home() {
       </div>
 
 
-      <footer className="w-full h-[120px] mt-[100px] bg-[#180b2881] flex">
+      <footer className="w-full h-[120px] mt-[100px] bg-[#180b2881] flex justify-between border-t-[1px] border-[#484848]">
 
-        <div className="flex-1 content-center">
-          <h1 className=" text-[25px] pl-[30px] bg-gradient-to-r from-white via-purple-90000 to-purple-900 text-transparent bg-clip-text">
+        <div className="content-center">
+          <h1 className="text-[25px] pl-[30px] bg-gradient-to-r text-nowrap from-white via-purple-90000 to-purple-900 text-transparent bg-clip-text">
             {"<Gabs DEV/>"}
           </h1>
         </div>
 
-        <div className=" content-center">
+        <div className="content-center">
           <div className="flex gap-2 px-10 flex-row justify-center">
-            <ContactCircle color="#3c07648b" icon={IconsImages.github.src} link="https://github.com/GabsMarc" />
-            <ContactCircle color="#3c07648b" icon={IconsImages.linkedinCircle.src} link="https://www.linkedin.com/in/gabriel-marcucci-3ab386208/" />
+            <BtnContact style="w-[60px]" text="CV" link="/Curriculo Gabriel Marcucci.pdf"/>
+            <ContactCircle icon={IconsImages.github.src} link="https://github.com/GabsMarc" />
+            <ContactCircle icon={IconsImages.linkedinCircle.src} link="https://www.linkedin.com/in/gabriel-marcucci-3ab386208/" />
           </div>
         </div>
 
@@ -248,5 +249,5 @@ export default function Home() {
 
 
     </main >
-  );
+  )
 }

@@ -18,12 +18,6 @@ import { ProjectContainer, ProjectFinance } from "../Projects/ProjectContainer"
 
 
 
-
-
-
-
-
-
 interface SwipeProps {
     content: Array<any>
     delay?: number
@@ -192,13 +186,13 @@ export function SwipeContent({ children, delay = 4000 }: SwipeAnyProps) {
 
             <button
                 ref={prevRef}
-                className="absolute top-[280px] md:top-[410px] lg:top-[280px] left-[10px]  z-10 transform -translate-y-1/2 bg-[#ffffff74] md:bg-white text-[#3c0764] text-[25px] font-bold h-[70px] w-[35px] lg:h-[100px] lg:w-[30px] rounded-full"
+                className="absolute top-[280px] md:top-[410px] lg:top-[280px] left-[10px] z-10 transform -translate-y-1/2 bg-[#ffffff74] text-[25px] font-bold h-[70px] w-[35px] lg:h-[100px] lg:w-[30px] rounded-full md:bg-[#4b1d8b] text-white hover:md:bg-[#32135e] duration-100"
             >
                 &lt;
             </button>
             <button
                 ref={nextRef}
-                className="absolute top-[280px] md:top-[410px] lg:top-[280px] right-[10px] z-10 transform -translate-y-1/2 bg-[#ffffff74] md:bg-white text-[#3c0764] text-[25px] font-bold h-[70px] w-[35px] lg:h-[100px] lg:w-[30px] rounded-full"
+                className="absolute top-[280px] md:top-[410px] lg:top-[280px] right-[10px] z-10 transform -translate-y-1/2 bg-[#ffffff74] text-[25px] font-bold h-[70px] w-[35px] lg:h-[100px] lg:w-[30px] rounded-full md:bg-[#4b1d8b] text-white hover:md:bg-[#32135e] duration-100"
             >
                 &gt;
             </button>

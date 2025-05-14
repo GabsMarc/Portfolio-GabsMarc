@@ -1,5 +1,3 @@
-import { FaGithubSquare } from "react-icons/fa"
-import { FaLinkedin } from "react-icons/fa"
 import { MotionBox } from "../Motion/Motion"
 import Image from "next/image"
 
@@ -7,6 +5,7 @@ interface BtnContactProps {
     icon?: string
     text: string
     link: string
+    style?: string
 }
 
 interface ContactCircleI {
@@ -15,11 +14,11 @@ interface ContactCircleI {
     color?: string
 }
 
-export function BtnContact({ text, link }: BtnContactProps) {
+export function BtnContact({ text, link, style }: BtnContactProps) {
 
     return (
         <MotionBox transition={0.3}>
-            <a className="px-3 py-[5px] mt-[6px] mx-2 font-medium bg-purple-900 flex flex-row rounded-lg justify-center items-center gap-5 hover:cursor-pointer hover:bg-purple-950 duration-200 "
+            <a className={`${style} px-3 py-[5px] md:mt-[6px] mx-2 font-medium bg-[#25053F] flex flex-row rounded-lg justify-center items-center gap-5 hover:cursor-pointer text-white hover:bg-[#32135e] duration-200`}
                 href={link}
             >
                 <span className="text-[18px] xl:text-[19px]">{text}</span>
@@ -33,8 +32,9 @@ export function BtnContactImage({ text, link, icon = "" }: BtnContactProps) {
 
     return (
         <MotionBox transition={0.3}>
-            <a className="px-5 py-[5px] mt-[6px] font-medium bg-purple-900 flex flex-row rounded-lg justify-center items-center gap-2 hover:cursor-pointer hover:bg-purple-950 duration-200 "
+            <a className="px-5 py-[5px] mt-[6px] font-medium bg-[#46146f] flex flex-row rounded-lg justify-center items-center gap-2 hover:cursor-pointer hover:bg-[#4c2385] duration-200"
                 href={link}
+                download
             >
                 <span className="text-[13px] lg:text-[18px] xl:text-[15px] text-nowrap">{text}</span>
                 <Image
@@ -55,9 +55,8 @@ export function ContactCircle({ icon, link, color = "#3B0764" }: ContactCircleI)
 
     return (
         <MotionBox transition={0.3}>
-            <a className="rounded-full p-[5px] bg-[#3B0764] flex flex-row justify-center items-center gap-1 hover:cursor-pointer hover:bg-purple-950 duration-200"
+            <a className="rounded-full p-[5px] bg-[#25053F] flex flex-row justify-center items-center gap-1 hover:cursor-pointer hover:bg-[#32135e] duration-300"
                 href={link}
-                style={{ backgroundColor: color }}
             >
                 <Image
                     src={icon}
